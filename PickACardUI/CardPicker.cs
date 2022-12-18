@@ -9,6 +9,12 @@ namespace PickACardUI
 	internal class CardPicker
 	{
 		static Random random = new Random();
+
+		/// <summary>
+		/// Picks a number of cards and returns them.
+		/// </summary>
+		/// <param name="numberOfCards">The number of cards to pick.</param>
+		/// <returns>An array of strings that contains the card names.</returns>
 		public static string[] PickSomeCards(int numberOfCards)
 		{
 			string[] pickedCards = new string[numberOfCards];
@@ -19,6 +25,10 @@ namespace PickACardUI
 			return pickedCards;
 		}
 
+		/// <summary>
+		/// Generates a random suit name.
+		/// </summary>
+		/// <returns>Suit name.</returns>
 		private static string RandomSuit()
 		{
 			int value = random.Next(1, 5);
@@ -29,6 +39,10 @@ namespace PickACardUI
 			return "Diamonds";
 		}
 
+		/// <summary>
+		/// Generates a random card number.
+		/// </summary>
+		/// <returns>Card number.</returns>
 		private static string RandomValue()
 		{
 			int value = random.Next(1, 14);
